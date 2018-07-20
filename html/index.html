@@ -7,25 +7,191 @@
     <title></title>
     <link rel="stylesheet" href="../css/index.css?a=5">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/animate.min.css">
     <link rel="stylesheet" href="../css/swiper.min.css">
 </head>
 <body>
-<!--导航-->
-<div class="nav"></div>
-<div class="swiper-container index-swiper marginTop">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide">
-            <video src="../upload/mov.mp4" loop preload="auto" autoplay width="100%"></video>
+    <!--导航-->
+    <div class="nav"></div>
+    <div id="vueBox" class="swiper-container index-swiper marginTop">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <video src="../upload/mov.mp4" loop preload="auto" autoplay width="100%"></video>
+            </div>
+            <div class="swiper-slide">
+                <!--left-->
+                <div id="index-slide-l" class="index-slide-l fl">
+                    <!--one-->
+                    <div class="item item01 fl">
+                        <p class="item-up clearfix">
+                            <span class="item-num01 fl">{{num[0]}}</span>
+                            <span class="fr">{{sup[0]}}</span>
+                        </p>
+                        <p class="indexTitle01">{{indexTitle[0]}}</p>
+                        <p class="indexintroduce01">{{introduce[0]}}</p>
+                        <p class="under01">{{understand}}</p>
+                    </div>
+                    <!--two-->
+                    <div class="item item02 fr">
+                        <p class="item-up clearfix">
+                            <span class="item-num02 fl">{{num[1]}}</span>
+                            <span class="fr">{{sup[1]}}</span>
+                        </p>
+                        <p class="indexTitle02">{{indexTitle[1]}}</p>
+                        <p class="indexintroduce02">{{introduce[1]}}</p>
+                        <p class="under02">{{understand}}</p>
+                    </div>
+                    <!--three-->
+                    <div class="item item03 fl itemTop">
+                        <p class="item-up clearfix">
+                            <span class="item-num03 fl">{{num[2]}}</span>
+                            <span class="fr">{{sup[2]}}</span>
+                        </p>
+                        <p class="indexTitle03">{{indexTitle[2]}}</p>
+                        <p class="indexintroduce03">{{introduce[2]}}</p>
+                        <p class="under03">{{understand}}</p>
+                    </div>
+                    <!--four-->
+                    <div class="item item04 fr itemTop">
+                        <p class="item-up clearfix">
+                            <span class="item-num04 fl">{{num[3]}}</span>
+                            <span class="fr">{{sup[3]}}</span>
+                        </p>
+                        <p class="indexTitle04">{{indexTitle[3]}}</p>
+                        <p class="indexintroduce04">{{introduce[3]}}</p>
+                        <p class="under04">{{understand}}</p>
+                    </div>
+                    <!--five-->
+                    <div class="item item05 fl itemTop">
+                        <p class="item-up clearfix">
+                            <span class="item-num05 fl">{{num[4]}}</span>
+                            <span class="fr">{{sup[4]}}</span>
+                        </p>
+                        <p class="indexTitle05">{{indexTitle[4]}}</p>
+                        <p class="indexintroduce05">{{introduce[4]}}</p>
+                        <p class="under05">{{understand}}</p>
+                    </div>
+                    <!--six-->
+                    <div class="item item06 fr itemTop">
+                        <p class="item-up clearfix">
+                            <span class="item-num06 fl">{{num[5]}}</span>
+                            <span class="fr">{{sup[5]}}</span>
+                        </p>
+                        <p class="indexTitle06">{{indexTitle[5]}}</p>
+                        <p class="indexintroduce06">{{introduce[5]}}</p>
+                        <p class="under06">{{understand}}</p>
+                    </div>
+                </div>
+                <!--right-->
+                <div id="index-slide-r">
+                    <!--one-->
+                    <span class="index-slide-r index-slide-r01 fl" style="left:50%;">
+                         <div class="index-r-left fl">
+                             <img src="../img/index-item01-banner.jpg" width="100%" alt="">
+                         </div>
+                         <div class="index-r-right fr">
+                             <p>{{message}}</p>
+                             <p :style="textR">{{num[0]}}</p>
+                             <div class="index-logo clearfix">
+                                 <img align="right" :src="indexLogo[0]" width="40%" alt="">
+                             </div>
+                             <p :class="{zhongHei:zh,color:'iscolor'}" :style="textR">服务客户名称：{{customerName[0]}}</p>
+                             <p :style="textR">{{release}}</p>
+                             <p :style="textR">{{end}}</p>
+                         </div>
+                    </span>
+                    <!--two-->
+                    <span class="index-slide-r index-slide-r02 fl">
+                         <div class="index-r-left fl">
+                             <img src="../img/index-item01-banner.jpg" width="100%" alt="">
+                         </div>
+                         <div class="index-r-right fr">
+                             <p>{{message}}</p>
+                             <p :style="textR">{{num[1]}}</p>
+                             <div class="index-logo clearfix">
+                                 <img align="right" :src="indexLogo[0]" width="40%" alt="">
+                             </div>
+                             <p :class="{zhongHei:zh,color:'iscolor'}" :style="textR">服务客户名称：{{customerName[1]}}</p>
+                             <p :style="textR">{{release}}</p>
+                             <p :style="textR">{{end}}</p>
+                         </div>
+                    </span>
+                    <!--three-->
+                    <span class="index-slide-r index-slide-r03 fl">
+                         <div class="index-r-left fl">
+                             <img src="../img/index-item01-banner.jpg" width="100%" alt="">
+                         </div>
+                         <div class="index-r-right fr">
+                             <p>{{message}}</p>
+                             <p :style="textR">{{num[2]}}</p>
+                             <div class="index-logo clearfix">
+                                 <img align="right" :src="indexLogo[0]" width="40%" alt="">
+                             </div>
+                             <p :class="{zhongHei:zh,color:'iscolor'}" :style="textR">服务客户名称：{{customerName[2]}}</p>
+                             <p :style="textR">{{release}}</p>
+                             <p :style="textR">{{end}}</p>
+                         </div>
+                    </span>
+                    <!--four-->
+                    <span class="index-slide-r index-slide-r04 fl">
+                         <div class="index-r-left fl">
+                             <img src="../img/index-item01-banner.jpg" width="100%" alt="">
+                         </div>
+                         <div class="index-r-right fr">
+                             <p>{{message}}</p>
+                             <p :style="textR">{{num[3]}}</p>
+                             <div class="index-logo clearfix">
+                                 <img align="right" :src="indexLogo[0]" width="40%" alt="">
+                             </div>
+                             <p :class="{zhongHei:zh,color:'iscolor'}" :style="textR">服务客户名称：{{customerName[3]}}</p>
+                             <p :style="textR">{{release}}</p>
+                             <p :style="textR">{{end}}</p>
+                         </div>
+                    </span>
+                    <!--five-->
+                    <span class="index-slide-r index-slide-r05 fl">
+                         <div class="index-r-left fl">
+                             <img src="../img/index-item01-banner.jpg" width="100%" alt="">
+                         </div>
+                         <div class="index-r-right fr">
+                             <p>{{message}}</p>
+                             <p :style="textR">{{num[4]}}</p>
+                             <div class="index-logo clearfix">
+                                 <img align="right" :src="indexLogo[0]" width="40%" alt="">
+                             </div>
+                             <p :class="{zhongHei:zh,color:'iscolor'}" :style="textR">服务客户名称：{{customerName[4]}}</p>
+                             <p :style="textR">{{release}}</p>
+                             <p :style="textR">{{end}}</p>
+                         </div>
+                    </span>
+                    <!--six-->
+                    <span class="index-slide-r index-slide-r06 fl">
+                         <div class="index-r-left fl">
+                             <img src="../img/index-item01-banner.jpg" width="100%" alt="">
+                         </div>
+                         <div class="index-r-right fr">
+                             <p>{{message}}</p>
+                             <p :style="textR">{{num[5]}}</p>
+                             <div class="index-logo clearfix">
+                                 <img align="right" :src="indexLogo[0]" width="40%" alt="">
+                             </div>
+                             <p :class="{zhongHei:zh,color:'iscolor'}" :style="textR">服务客户名称：{{customerName[5]}}</p>
+                             <p :style="textR">{{release}}</p>
+                             <p :style="textR">{{end}}</p>
+                         </div>
+                    </span>
+                </div>
+            </div>
+            <div class="swiper-slide"></div>
         </div>
-        <div class="swiper-slide"></div>
-        <div class="swiper-slide"></div>
+        <div class="swiper-pagination index-pagination"></div>
     </div>
-    <div class="swiper-pagination index-pagination"></div>
-</div>
+
 </body>
 <script src="../js/jquery-1.7.2.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/swiper.min.js"></script>
+<script src="../js/Vue.js"></script>
 <script src="../js/index.js?a=5"></script>
 <script>
     $.ajax({
