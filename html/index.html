@@ -182,11 +182,11 @@
                     </span>
                 </div>
             </div>
+            <!--页脚导航-->
             <div class="swiper-slide"></div>
         </div>
         <div class="swiper-pagination index-pagination"></div>
     </div>
-
 </body>
 <script src="../js/jquery-1.7.2.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
@@ -194,12 +194,22 @@
 <script src="../js/Vue.js"></script>
 <script src="../js/index.js?a=5"></script>
 <script>
+    /*导航加载*/
     $.ajax({
         url:'nav.html',
         type:'post',
         dataType:'html',
         success:function(data){
             $('.nav').html($(data))
+        }
+    })
+    /*页脚加载*/
+    $.ajax({
+        url:'bottom.html',
+        type:'post',
+        dataType:'html',
+        success:function(data){
+            $('.swiper-slide:nth-child(3)').html($(data))
         }
     })
 </script>

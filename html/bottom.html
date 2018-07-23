@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title>bottom</title>
+    <link rel="stylesheet" href="../css/index.css?a=5">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<body>
+<div id="vueBottom">
+    <div class="footNav clearfix">
+        <div class="footDiv footNav-01 borderL fl ">
+            <p :class="{zhongHei:zh}">{{footP[0]}}</p>
+            <ul>
+                <foot-01 v-for="item in footCom" :todo="item" :key="item.id1"></foot-01>
+            </ul>
+        </div>
+        <div class="footDiv footNav-02 fl borderL">
+            <p :class="{zhongHei:zh}">{{footP[1]}}</p>
+            <ul>
+                <foot-02 v-for="item in footCom" :todo="item" :key="item.id2"></foot-02>
+            </ul>
+        </div>
+        <div class="footDiv footNav-03 fl borderL">
+            <p style="opacity: 0">{{footP[1]}}</p>
+            <ul>
+                <foot-03 v-for="item in footCom" :todo="item" :key="item.id3"></foot-03>
+            </ul>
+        </div>
+        <div class="footDiv footNav-04 fl borderL">
+            <p :class="{zhongHei:zh}">{{footP[2]}}</p>
+            <ul>
+                <foot-04 v-for="item in footCom" :todo="item" :key="item.id4"></foot-04>
+            </ul>
+        </div>
+        <div class="footDiv footNav-05 fl borderL">
+            <p :class="{zhongHei:zh}">{{footP[3]}}</p>
+            <ul>
+                <foot-05 v-for="item in footCom" :todo="item" :key="item.id5"></foot-05>
+            </ul>
+        </div>
+        <div class="footDiv footNav-06 fl borderL">
+            <p :class="{zhongHei:zh}">{{footP[4]}}</p>
+            <ul>
+                <foot-06 v-for="item in footCom" :todo="item" :key="item.id6"></foot-06>
+            </ul>
+        </div>
+        <div class="footDiv footNav-07 fl borderL borderR">
+            <img src="../img/bottom.png" width="100%" alt="">
+        </div>
+    </div>
+    <div class="address">
+        <div class="addressBox">
+            <i class="icon_address">&#xe61f;</i> <span>上海市定西路727号映巷创意工场4号楼 3D</span>
+            <i class="icon_tel">&#xe668;</i> <span>+86-21-63809886</span>
+            <i class="icon_tel2">&#xe672;</i> <span>+86-21-60908309</span>
+            <i class="icon_mailer">&#xe63c;</i> <span>webmaster@zealan.com.cn</span>
+            <span class="addressAdd">Add<sup>+</sup>广告集团 2018</span><span>沪ICP备15034459号</span>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../js/jquery-1.7.2.min.js"></script>
+<script src="../js/Vue.js"></script>
+<script src="../js/vue2.js"></script>
+</html>
