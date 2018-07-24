@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title>contact</title>
+    <link rel="stylesheet" href="../css/index.css?a=5">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/animate.min.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+</head>
+<body>
+<!--导航-->
+<div class="nav"></div>
+<div id="vueBox" class="swiper-container index-swiper marginTop">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="container">
+                <div class="contact-up clearfix">
+                    <div class="contact-up-l fl" :style="textL" :class="{zhunHei:zh}">有美食，有温度，有创意</div>
+                    <div class="contact-up-r fl" :style="textR" :class="{zhunHei:zh}">CONTACT</div>
+                </div>
+                <div class="contact-down" @mouseover="poLeftHover()" @mouseout="poLeftLeave()">
+                    <div class="down-mark"></div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide"></div>
+        <!--页脚导航-->
+        <div class="swiper-slide"></div>
+    </div>
+    <div class="swiper-pagination index-pagination"></div>
+</div>
+</body>
+<script src="../js/jquery-1.7.2.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/swiper.min.js"></script>
+<script src="../js/Vue.js"></script>
+<script src="../js/index.js?a=5"></script>
+</html>
