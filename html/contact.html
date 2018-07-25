@@ -15,20 +15,65 @@
 <div class="nav"></div>
 <div id="vueBox" class="swiper-container index-swiper marginTop">
     <div class="swiper-wrapper">
+        <!--page1-->
         <div class="swiper-slide">
             <div class="container">
                 <div class="contact-up clearfix">
                     <div class="contact-up-l fl" :style="textL" :class="{zhunHei:zh}">有美食，有温度，有创意</div>
                     <div class="contact-up-r fl" :style="textR" :class="{zhunHei:zh}">CONTACT</div>
                 </div>
-                <div class="contact-down" @mouseover="poLeftHover()" @mouseout="poLeftLeave()">
-                    <div class="down-mark"></div>
+                <div class="contact-down">
+                    <div class="down-mark">
+                        <ul>
+                            <li>CONTACT</li>
+                            <li>Add<sup>+</sup> 广告集团</li>
+                            <li><i class="icon_address">&#xe61f;</i> 上海市定西路727号 映巷创意工场 4号楼3D</li>
+                            <li><i class="icon_tel">&#xe668;</i> +86-21-63809886</li>
+                            <li><i class="icon_tel2">&#xe672;</i> +86-21-60908309</li>
+                            <li><i class="icon_mailer">&#xe63c;</i> webmaster@zealan.com.cn</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cursor">
+                    <img src="../img/cursor.png" width="4%" alt="">
                 </div>
             </div>
         </div>
-        <div class="swiper-slide"></div>
+        <!--page2-->
+        <div class="swiper-slide">
+            <div class="container clearfix">
+                 <div class="contact-p2-l fl">
+                     <p class="contact-p2-tit">LIST AS WANTED</p>
+                     <p class="contact-p2-tit2">创意通缉令</p>
+                     <ul>
+                         <Li>
+                             <p>客户服务专员/主管</p>
+                             <p>口条灵巧，条理清晰，能文能武...</p>
+                         </Li>
+                         <Li>
+                             <p>文案策划</p>
+                             <p>思路奔上，创意至上...</p>
+                         </Li>
+                         <Li>
+                             <p>活动专员/经理</p>
+                             <p>挥洒自如，见多识广，随机应变...</p>
+                         </Li>
+                         <Li>
+                             <p>资深平面设计师/设计师</p>
+                             <p>创意平面，视为艺术，思维敏捷，风格多样...</p>
+                         </Li>
+                         <a href="javascript:;"><li>了解更多职位详情 GO ></li></a>
+                     </ul>
+                 </div>
+                 <div class="contact-p2-r fl clearfix"></div>
+                 <div class="cursor">
+                    <img src="../img/cursor.png" width="4%" alt="">
+                 </div>
+            </div>
+
+        </div>
         <!--页脚导航-->
-        <div class="swiper-slide"></div>
+        <div class="swiper-slide footer"></div>
     </div>
     <div class="swiper-pagination index-pagination"></div>
 </div>
