@@ -23,6 +23,7 @@ var footComponent06 = {
     props:['todo'],
     template:'<li>{{todo.text6}}</li>'
 };
+
 /*vue 初始化*/
 var vm = new Vue({
     el: '#vueBox',
@@ -65,6 +66,15 @@ var vm = new Vue({
     },
     /*方法*/
     methods:{
+        aboutPage2Swiper:function(){
+            /*初始化 swiper*/
+            var customerSwiper = new Swiper('.about-page2-swiper',{
+                direction:'horizontal',
+                mousewheelControl : true,
+                pagination : '.about-page2-pagination',
+                slidesPerView :'auto',
+            });
+        },
         customerSwiper:function(){
             /*初始化 swiper*/
             var customerSwiper = new Swiper('.customer-swiper',{
@@ -129,7 +139,11 @@ var vm = new Vue({
                         'left':'100%',
                         'transition':'all .8s'
                     })
-                    $('.index-slide-r01').show()
+                    /*$('.index-slide-r01').css({'left':'50%'});*/
+                    $('.index-slide-r01').show();
+                    /*if($('.index-slide-r').length == 0){
+                        $('.index-slide-r01').css({'left':'50%'})
+                    }*/
                 })
             }
             hover($('.item01'),$('.item-num01'),$('.under01'),$('.indexTitle01'),$('.indexintroduce01'),$('.index-slide-r01'))
@@ -144,6 +158,7 @@ var vm = new Vue({
 vm.indexSwiper();
 vm.customerSwiper();
 vm.indexHover();
+vm.aboutPage2Swiper()
 
 $.fn.extend({
    over:function(child,overL,outL){
@@ -179,3 +194,4 @@ $.ajax({
         $('.footer').html(data)
     }
 })
+

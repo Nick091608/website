@@ -229,6 +229,14 @@ a{text-decoration: none;}
 
 /*page1   right*/
 .about-r{background: url("../img/ab-page1.jpg") no-repeat center/cover;}
+.about-slide02-slide01{width: 100%;height: 6rem;border: 1px solid red;margin: 10% auto;}
+.about-up{margin: 0 auto;}
+.about-up-l,.about-up-r{line-height: 16px;}
+.about-slide02-01-down{width: 100%;height: 100%;}
+.about-slide02-div{width: 30%;height: 2rem;background: darkseagreen;}
+.about-slide02-div:nth-child(2),.about-slide02-div:nth-child(3){margin:0 0 0 5%;background: #c1c1c1;}
+.about-slide02-div:nth-child(3){background: #8e8e8e;}
+
 
 
 
