@@ -71,8 +71,9 @@ var vm = new Vue({
             var customerSwiper = new Swiper('.about-page2-swiper',{
                 direction:'horizontal',
                 mousewheelControl : true,
+                paginationClickable :true,
                 pagination : '.about-page2-pagination',
-                slidesPerView :'auto',
+                /*slidesPerView :'auto',*/
             });
         },
         customerSwiper:function(){
@@ -167,9 +168,55 @@ $.fn.extend({
         },function(){
             child.css({'left':outL,'transition':'all .6s'})
         })
+   },
+   hoverTop:function(mark,abbox,aboutL,aboutR,iconTotal,overT,outT,wover,wout,whalf,iconr,iconl){
+       this.hover(function(){
+           mark.css({'top':overT,'transition':'all .6s'})
+           iconTotal.css({'left':iconr,'transition':'all .6s'})
+           abbox.css({'width':wover,'transition':'all .6s'})
+           aboutL.css({'width':wout})
+           aboutR.hide();
+       },function(){
+           mark.css({'top':outT,'transition':'all .6s'})
+           iconTotal.css({'left':iconl,'transition':'all .6s'})
+           abbox.css({'width':wout,'transition':'all .6s'})
+           aboutL.css({'width':whalf})
+           aboutR.show();
+       })
    }
 })
 $('.contact-down').over($('.down-mark'),"50%","100%")
+$('.about-slide02-div').eq(0).hoverTop($('.about-mark'),$('.about-div-box'),$('.about-text-l'),$('.about-text-r'),$('.icon-total'),"0","-100%","80%","100%","50%","10%","0")
+
+//请求数据
+function ajaxNum() {
+    var a = $('.view_num').html()
+    $.ajax({
+        type: 'GET',
+        url: 'http://www.addgroup.com.cn/form/session.php',
+        data: {param: a},
+        success:function (response) {
+            $('.view_num').html(response);
+        }
+    });
+}
+$('.icon_view').click(function(){
+    ajaxNum()
+})
+
+//数据库返回数据
+function ajaxNum2() {
+    $.ajax({
+        type: 'GET',
+        url: 'http://www.addgroup.com.cn/form/session2.php',
+        success:function (response) {
+            $('.view_num').html(response);
+        }
+    });
+}
+ajaxNum2()
+
+
 
 
 
