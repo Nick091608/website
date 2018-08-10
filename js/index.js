@@ -23,7 +23,24 @@ var footComponent06 = {
     props:['todo'],
     template:'<li>{{todo.text6}}</li>'
 };
-
+/*作品组件*/
+var workLeftComponent = {
+    props: ['todo'],
+    template:`
+    <div class="work-left">
+        <p class="w-newFast">{{todo.newFast}}</p>
+        <div class="work-under-l">
+           <p class="w-title">{{todo.title}}</p>
+           <p class="w-section">{{todo.section}}</p>
+           <p class="w-under">{{todo.understand}}</p>
+        </div>
+        <div class="icon-total" solt="total">
+            <span class="icon_view">&#xe614;</span> <span class="view_num">241</span>
+            <span class="icon_collect">&#xe60f;</span> <span class="collect_num">241</span>
+            <span class="icon_follow">&#xe663;</span> <span class="follow_num">241</span>
+        </div>
+    </div>`
+}
 /*vue 初始化*/
 var vm = new Vue({
     el: '#vueBox',
@@ -35,6 +52,7 @@ var vm = new Vue({
         'foot-04':footComponent04,
         'foot-05':footComponent05,
         'foot-06':footComponent06,
+        'work-left':workLeftComponent,
     },
     /*数据*/
     data:{
@@ -47,6 +65,13 @@ var vm = new Vue({
         textR:{textAlign:'end',},
         textC:{textAlign:'center',},
         textL:{textAlign:'left',},
+        /*作品部分*/
+        wL01_01:[
+            {id:0,newFast:'最新案例',title:'招行质押贷款海报',section:'招商银行（China Merchants Bank）是中国第一家完全由企业法人持股的股份制商业银行...',understand:'了解详情 GO >'},
+        ],
+        wL01_02:[
+            {id:0,newFast:'最新案例123',title:'招行质押贷款海报',section:'招商银行（China Merchants Bank）是中国第一家完全由企业法人持股的股份制商业银行...',understand:'了解详情 GO >'},
+        ],
         /*页脚组件*/
         footCom:[
             {id1:0,text1:'品牌展厅规划设计',id2:0,text2:'企业内部传播活动',id3:0,text3:'新闻发布会',id4:0,text4:'企业VI系统设计',id5:0,text5:'品牌视频解决方案',id6:0,text6:'微信公众号运营及维护'},
@@ -68,12 +93,19 @@ var vm = new Vue({
     methods:{
         aboutPage2Swiper:function(){
             /*初始化 swiper*/
-            var customerSwiper = new Swiper('.about-page2-swiper',{
+            var aboutp2Swiper = new Swiper('.about-page2-swiper',{
                 direction:'horizontal',
-                mousewheelControl : true,
                 paginationClickable :true,
                 pagination : '.about-page2-pagination',
                 /*slidesPerView :'auto',*/
+            });
+        },
+        aboutPage3Swiper:function(){
+            /*初始化 swiper*/
+            var aboutp3Swiper = new Swiper('.about-page3-swiper',{
+                direction:'horizontal',
+                paginationClickable :true,
+                pagination : '.about-page3-pagination',
             });
         },
         customerSwiper:function(){
@@ -140,11 +172,7 @@ var vm = new Vue({
                         'left':'100%',
                         'transition':'all .8s'
                     })
-                    /*$('.index-slide-r01').css({'left':'50%'});*/
                     $('.index-slide-r01').show();
-                    /*if($('.index-slide-r').length == 0){
-                        $('.index-slide-r01').css({'left':'50%'})
-                    }*/
                 })
             }
             hover($('.item01'),$('.item-num01'),$('.under01'),$('.indexTitle01'),$('.indexintroduce01'),$('.index-slide-r01'))
@@ -154,12 +182,29 @@ var vm = new Vue({
             hover($('.item05'),$('.item-num05'),$('.under05'),$('.indexTitle05'),$('.indexintroduce05'),$('.index-slide-r05'))
             hover($('.item06'),$('.item-num06'),$('.under06'),$('.indexTitle06'),$('.indexintroduce06'),$('.index-slide-r06'))
         },
+        /*作品*/
+        workp1Swiper:function(){
+            /*初始化 swiper*/
+            var workPage1Swiper = new Swiper('.work-page01',{
+                direction:'horizontal',
+                paginationClickable :true,
+                pagination : '.work-page01-pagination',
+                /*自定义分页器*/
+                //paginationType : 'custom',
+                //paginationElement : 'li',
+                paginationBulletRender: function (swiper, index, className) {
+                    return '<span class=" workPage ' + className + ' ">' + '0'+ (index + 1) + '</span>';
+                }
+            });
+        },
     },
 })
 vm.indexSwiper();
 vm.customerSwiper();
 vm.indexHover();
-vm.aboutPage2Swiper()
+vm.aboutPage2Swiper();
+vm.aboutPage3Swiper();
+vm.workp1Swiper();
 
 $.fn.extend({
    over:function(child,overL,outL){
@@ -169,52 +214,40 @@ $.fn.extend({
             child.css({'left':outL,'transition':'all .6s'})
         })
    },
-   hoverTop:function(mark,abbox,aboutL,aboutR,iconTotal,overT,outT,wover,wout,whalf,iconr,iconl){
-       this.hover(function(){
-           mark.css({'top':overT,'transition':'all .6s'})
-           iconTotal.css({'left':iconr,'transition':'all .6s'})
-           abbox.css({'width':wover,'transition':'all .6s'})
-           aboutL.css({'width':wout})
-           aboutR.hide();
-       },function(){
-           mark.css({'top':outT,'transition':'all .6s'})
-           iconTotal.css({'left':iconl,'transition':'all .6s'})
-           abbox.css({'width':wout,'transition':'all .6s'})
-           aboutL.css({'width':whalf})
-           aboutR.show();
-       })
-   }
 })
 $('.contact-down').over($('.down-mark'),"50%","100%")
-$('.about-slide02-div').eq(0).hoverTop($('.about-mark'),$('.about-div-box'),$('.about-text-l'),$('.about-text-r'),$('.icon-total'),"0","-100%","80%","100%","50%","10%","0")
 
 //请求数据
-function ajaxNum() {
-    var a = $('.view_num').html()
+function ajaxNum(ele) {
+    var about01 = ele.html();
     $.ajax({
         type: 'GET',
         url: 'http://www.addgroup.com.cn/form/session.php',
-        data: {param: a},
+        data: {view: about01},
         success:function (response) {
-            $('.view_num').html(response);
+            /*var obj = eval( "(" + response+ ")"  )*/
+            console.log(response);
+            ele.html(response);
         }
     });
 }
 $('.icon_view').click(function(){
-    ajaxNum()
+    ajaxNum($('.view_num'))
 })
 
+
 //数据库返回数据
-function ajaxNum2() {
+function ajaxNum2(ele) {
     $.ajax({
         type: 'GET',
         url: 'http://www.addgroup.com.cn/form/session2.php',
         success:function (response) {
-            $('.view_num').html(response);
+            ele.html(response);
         }
     });
 }
-ajaxNum2()
+ajaxNum2($('.view_num'))
+
 
 
 

@@ -154,13 +154,11 @@ a{text-decoration: none;}
     -webkit-text-stroke-width: 0.2px;
     -moz-osx-font-smoothing: grayscale;
 }
-
 .zhongHei{font-family: '方正兰亭中黑_SC'}
 .zhunHei{font-family: '方正兰亭准黑_GBK.TTF'}
 .dbsc{font-family: 'LanTingHeiDB-SC.otf'}
 .teHei{font-family: '兰亭特黑简.TTF'}
 .heiJian{font-family: '兰亭黑简.TTF'}
-
 /*导航 css*/
 .navbar p{margin:0 auto;text-align: center;}
 .navbar-brand>img {margin: 0 0 0 -14px;}
@@ -275,29 +273,71 @@ a{text-decoration: none;}
 
 /*page1   right*/
 .about-r{background: url("../img/ab-page1.jpg") no-repeat center/cover;}
-.about-slide02-slide01{width: 100%;height: 6rem;border: 1px solid red;margin: 10% auto;}
+.about-slide02-slide01,.about-slide03-slide01{width: 100%;height: 6rem;border: 1px solid red;margin: 10% auto;}
 .about-up{margin: 0 auto;height: .6rem;}
 .about-up-l,.about-up-r{line-height: 16px;}
-.about-slide02-01-down{width: 100%;height: 5.4rem;}
+.about-slide02-01-down,.about-slide03-01-down{width: 100%;height: 5.4rem;}
 .about-slide02-div{position: relative;width: 30%;height: 100%;background: darkseagreen;cursor: pointer}
 .about-slide02-div:nth-child(2),.about-slide02-div:nth-child(3){margin:0 0 0 5%;background: #c1c1c1;}
 .about-slide02-div:nth-child(3){background: #8e8e8e;}
 .about-slide02-div:hover .about-text-l{font-size: 18px}
 .about-slide02-div:hover .main{color:#666666;}
 .about-slide02-div:hover .under{color:#e50043;}
-.about-div-box{width: 100%;height: 100%;margin: 0 auto}
-.about-div-img{position:relative;width: 100%;height: 2.8rem;background: url("../img/ab-page2-1.jpg") no-repeat center top/cover;overflow: hidden;}
-.about-mark{position: absolute;top:-100%;left:0;width: 100%;height: 100%;font-size: 50px;line-height: 2.8rem;background: rgba(0,0,0,.5)}
-.about-text-l,.about-text-r{width: 50%;line-height: 50px;font-size: 16px;color:#e50043;}
+.about-slide02-div:hover .about-mark,.about-slide03-div:hover .about-mark{top:0;transition: all .5s}
+.about-slide02-div:hover .about-div-box{width:80%;transition: all .5s}
+.about-slide02-div:hover .about-text-r{display:none;}
+.about-div-box{position: relative;width: 100%;height: 2.6rem;margin: 0 auto;transition: all .5s}
+.about-div-img,.about-div-img02,.about-div-img03{position:relative;width: 100%;height: 2.8rem;background: url("../img/ab-page2-1.jpg") no-repeat center top/cover;overflow: hidden;}
+.about-div-img02{background: url("../img/ab-page2-2.jpg") no-repeat center top/cover;}
+.about-div-img03{background: url("../img/ab-page2-3.jpg") no-repeat center top/cover;}
+.about-mark{position: absolute;top:-100%;left:0;width: 100%;height: 100%;font-size: 50px;line-height: 2.8rem;background: rgba(0,0,0,.5);transition: all .5s}
+.about-text-l,.about-text-r{position: absolute;top:0;right:0; line-height: 50px;font-size: 16px;color:#e50043;}
+.about-text-l{transition: all .5s;left:0;}
 .about-text-r{width: 50%;line-height: 50px;font-size: 14px;}
-.about-slide02-div .main{width: 100%;height: auto;line-height: 20px;font-size: 12px;color:#717071;}
+.about-slide02-div .main{position:absolute;top:25%;left:0;width: 100%;height: auto;line-height: 20px;font-size: 12px;color:#717071;}
+.about-slide02-div .under{position: absolute;top:65%;left:0;}
 .about-slide02-div p{font-size: 12px;color:#595757;line-height: .5rem}
-.icon-total{position: absolute;bottom:0;left:0;color:#717071;width: 100%}
+.icon-total{position: absolute;bottom:0;left:0;color:#717071;width: 100%;transition: all .6s}
 .icon-total span:nth-child(odd){margin:0 0 0 2%;cursor:pointer;}
 .icon-total span:first-child{margin:0 0 0 0;}
 .icon-total span:nth-child(odd):hover{color:#e50043;}
 /*分页器*/
 .about-page2-pagination{bottom:210px!important;}
+
+/*page3 */
+.about-slide03-slide01{height: 3rem;margin: 20% auto;}
+.about-slide03-01-down{height: 2.4rem}
+.about-slide03-01-down .about-slide03-div{ width: 16%;height: 1.5rem;margin: 0 0 0 5%;background: url("../img/corps1.jpg") no-repeat center top/cover;overflow: hidden;}
+.about-slide03-div .about-mark{position: relative;font-size: 30px;text-align: center;}
+.about-slide03-div .about-mark p{line-height: 1.5rem;}
+.about-mark .mark-under{position:absolute;bottom:0;left:0;width: 100%;height: .2rem;background: rgba(0,0,0,.5);font-size: 12px;}
+.about-mark .mark-under div{width: 50%;height:100%;line-height: .2rem}
+.about-slide03-01-down .about-slide03-div02{background: url("../img/corps2.jpg") no-repeat center top/cover;}
+.about-slide03-01-down .about-slide03-div03{background: url("../img/corps3.jpg") no-repeat center top/cover;}
+.about-slide03-01-down .about-slide03-div04{background: url("../img/corps4.jpg") no-repeat center top/cover;}
+.about-slide03-01-down .about-slide03-div05{background: url("../img/corps5.jpg") no-repeat center top/cover;}
+.about-slide03-01-down .about-slide03-div:first-child{margin: 0 auto;}
+/*分页器*/
+.about-page3-pagination{bottom:4.5rem!important;}
+/*作品 css*/
+.work-page01{height: 6rem;margin: 8% auto;}
+/*分页器*/
+.work-page01-pagination{text-align: right;}
+.workPage{text-decoration: underline;margin: 0 1%!important;font-family: DIN;}
+.work-page01-pagination .swiper-pagination-bullet{opacity:1;height: 0;color: #737373;}
+.work-page01-pagination .swiper-pagination-bullet-active {color: #ff4832;font-size: 24px}
+/*主体部分*/
+.work-page01-01-l,.work-page01-01-c,.work-page01-01-r{position:relative;height: 100%;color:#3e3a39;}
+.work-page01-01-l{width: 25%;background: #8c8c8c;}
+.work-page01-01-c{width: 40%;margin:0 5%; background:url("../img/workspage1-logo.jpg") no-repeat center top/cover;}
+.work-page01-01-r{width: 25%;background: #67a972;}
+.w-newFast{position: absolute;top: 0;left:0;font-size: 20px;}
+.work-under-l{position: absolute;top:40%;left:0;}
+.work-under-l .w-title{color:#bc0b21;font-size: 18px}
+.work-under-l .w-section{font-size: 14px}
+.work-under-l .w-under{margin: 10% 0 0 0;color:#bc0b21;font-size: 12px}
+.w-iconTotal{width: 100%;height: auto;}
+
 
 
 
@@ -326,7 +366,7 @@ a{text-decoration: none;}
 /*媒体查询*/
 @media (max-width: 768px){
     /*重写响应式*/
-    .container{width: 100%!important;padding:0 0!important;}
+    .container{width: 100%!important;padding:0 0!important;border: 1px solid red}
     .navbar{position:fixed!important;width: 100%;z-index:10}
     .footNav{display: none;padding:0 auto;}
 }
@@ -337,24 +377,28 @@ a{text-decoration: none;}
 }
 @media (min-width:1400px){
     /*重写响应式*/
-    .container{width: 1400px!important;padding:0 0!important; }
+    .container{width: 1400px!important;padding:0 0!important;border: 1px solid red }
     .navbar,.index-page2,.customer-swiper{width:1400px;}
     .footNav,.addressBox{width: 1400px!important;}
 }
 @media (max-width:1400px) and (min-width: 1200px){
     /*重写响应式*/
-    .container{width: 1200px!important;padding:0 0!important;}
+    .container{width: 1200px!important;padding:0 0!important;border: 1px solid red}
     .navbar,.index-page2,.customer-swiper{width:1200px;}
     .footNav,.addressBox{width: 1200px}
     .addressAdd{margin: 0 0 0 10%;}
     .footDiv p{font-size: 14px;}
     .footDiv li{font-size: 12px;}
     .contact-p2-l li p:nth-child(2) {font-size: 14px; }
-
+    .about-div-img{height: 2.4rem}
+    .about-mark{line-height: 2.4rem}
+    .about-div-box{height: 2.5rem}
+    .about-slide02-div .under{top:70%;}
+    .about-slide02-01-down{height: 5rem}
 }
 @media (max-width:1200px) and (min-width: 1000px){
     /*重写响应式*/
-    .container{width: 1000px!important;padding:0 0!important;}
+    .container{width: 1000px!important;padding:0 0!important;border: 1px solid red}
     .navbar,.index-page2,.customer-swiper{width:1000px;}
     .footNav,.addressBox{width: 1000px}
     .addressBox{font-size: 12px}
@@ -371,10 +415,12 @@ a{text-decoration: none;}
     .contact-p2-l li p:nth-child(2) {font-size: 12px; }
     .contact-p2-l li:last-child { font-size: 12px; }
     .contact-down ul li:first-child { margin: 10% 0 27% 2%; }
+    .about-slide02-div .main{height: 5rem}
+    .about-slide02-div:hover .about-text-l {font-size: 16px;}
 }
 @media (max-width:1000px) and (min-width: 768px){
     /*重写响应式*/
-    .container{width: 768px!important;padding:0 0!important;}
+    .container{width: 768px!important;padding:0 0!important;border: 1px solid red}
     .navbar,.index-page2,.customer-swiper{width:768px;}
     .footNav,.addressBox{width: 768px}
     .footDiv{clear: both;width: 100%;}
