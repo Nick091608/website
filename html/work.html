@@ -20,31 +20,77 @@
             <div class="swiper-container container work-page01">
                 <div class="swiper-wrapper">
                     <!--page1-->
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" >
                         <div class="work-page01-01-l fl">
-                            <work-left v-for="item in wL01_01" :key="item.id" :todo="item">
-                                <slot name="total"></slot>
-                            </work-left>
+                            <work-left v-for="item in wL01_l_01" :key="item.id" :todo="item"></work-left>
                         </div>
-                        <div class="work-page01-01-c fl"></div>
-                        <div class="work-page01-01-r fl"></div>
+                        <div class="work-page01-01-c fl">
+                            <work-center></work-center>
+                        </div>
+                        <div class="work-page01-01-r fl">
+                            <work-right v-for="item in wL01_r_01" :key="item.id" :todo="item"></work-right>
+                        </div>
                     </div>
                     <!--page2-->
                     <div class="swiper-slide">
                         <div class="work-page01-01-l fl">
-                            <work-left v-for="item in wL01_02" :key="item.id" :todo="item"></work-left>
+                            <work-left v-for="item in wL01_l_01" :key="item.id" :todo="item"></work-left>
                         </div>
-                        <div class="work-page01-01-c fl"></div>
-                        <div class="work-page01-01-r fl"></div>
+                        <div class="work-page01-01-c work-page01-02-c fl">
+                            <work-center></work-center>
+                        </div>
+                        <div class="work-page01-01-r fl">
+                            <work-right v-for="item in wL01_r_01" :key="item.id" :todo="item"></work-right>
+                        </div>
                     </div>
                     <!--page3-->
-                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide">
+                        <div class="work-page01-01-l fl">
+                            <work-left v-for="item in wL01_l_01" :key="item.id" :todo="item"></work-left>
+                        </div>
+                        <div class="work-page01-01-c work-page01-03-c fl">
+                            <work-center></work-center>
+                        </div>
+                        <div class="work-page01-01-r fl">
+                            <work-right v-for="item in wL01_r_01" :key="item.id" :todo="item"></work-right>
+                        </div>
+                    </div>
                     <!--page4-->
-                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide">
+                        <div class="work-page01-01-l fl">
+                            <work-left v-for="item in wL01_l_01" :key="item.id" :todo="item"></work-left>
+                        </div>
+                        <div class="work-page01-01-c work-page01-04-c fl">
+                            <work-center></work-center>
+                        </div>
+                        <div class="work-page01-01-r fl">
+                            <work-right v-for="item in wL01_r_01" :key="item.id" :todo="item"></work-right>
+                        </div>
+                    </div>
                     <!--page5-->
-                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide">
+                        <div class="work-page01-01-l fl">
+                            <work-left v-for="item in wL01_l_01" :key="item.id" :todo="item"></work-left>
+                        </div>
+                        <div class="work-page01-01-c work-page01-05-c fl">
+                            <work-center></work-center>
+                        </div>
+                        <div class="work-page01-01-r fl">
+                            <work-right v-for="item in wL01_r_01" :key="item.id" :todo="item"></work-right>
+                        </div>
+                    </div>
                     <!--page6-->
-                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide">
+                        <div class="work-page01-01-l fl">
+                            <work-left v-for="item in wL01_l_01" :key="item.id" :todo="item"></work-left>
+                        </div>
+                        <div class="work-page01-01-c work-page01-06-c fl">
+                            <work-center></work-center>
+                        </div>
+                        <div class="work-page01-01-r fl">
+                            <work-right v-for="item in wL01_r_01" :key="item.id" :todo="item"></work-right>
+                        </div>
+                    </div>
                 </div>
                 <div class="swiper-pagination work-page01-pagination"></div>
             </div>

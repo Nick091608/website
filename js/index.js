@@ -24,6 +24,7 @@ var footComponent06 = {
     template:'<li>{{todo.text6}}</li>'
 };
 /*作品组件*/
+//left
 var workLeftComponent = {
     props: ['todo'],
     template:`
@@ -34,12 +35,36 @@ var workLeftComponent = {
            <p class="w-section">{{todo.section}}</p>
            <p class="w-under">{{todo.understand}}</p>
         </div>
-        <div class="icon-total" solt="total">
+        <div class="icon-total">
             <span class="icon_view">&#xe614;</span> <span class="view_num">241</span>
             <span class="icon_collect">&#xe60f;</span> <span class="collect_num">241</span>
             <span class="icon_follow">&#xe663;</span> <span class="follow_num">241</span>
         </div>
     </div>`
+}
+//right
+var workRightComponent = {
+    props: ['todo'],
+    template:`
+    <div class="work-right">
+        <p class="w-r-num">{{todo.num}}</p>
+        <p class="w-r-num2">{{todo.num2}}</p>
+        <div class="work-under-r">
+            <img :src="todo.imgUrl" width="90%" alt="">
+            <p class="w-r-title">{{todo.title}}</p>
+            <p class="w-r-section">{{todo.section}}</p>
+        </div>
+    </div>`
+}
+//center
+var workCenterComponent = {
+    template:`
+    <div class="work-mark">
+        <p>GO</p>
+        <P>+</P>
+        <P>点击了解详情</P>
+    </div>
+    `
 }
 /*vue 初始化*/
 var vm = new Vue({
@@ -53,6 +78,8 @@ var vm = new Vue({
         'foot-05':footComponent05,
         'foot-06':footComponent06,
         'work-left':workLeftComponent,
+        'work-right':workRightComponent,
+        'work-center':workCenterComponent,
     },
     /*数据*/
     data:{
@@ -66,11 +93,11 @@ var vm = new Vue({
         textC:{textAlign:'center',},
         textL:{textAlign:'left',},
         /*作品部分*/
-        wL01_01:[
+        wL01_l_01:[
             {id:0,newFast:'最新案例',title:'招行质押贷款海报',section:'招商银行（China Merchants Bank）是中国第一家完全由企业法人持股的股份制商业银行...',understand:'了解详情 GO >'},
         ],
-        wL01_02:[
-            {id:0,newFast:'最新案例123',title:'招行质押贷款海报',section:'招商银行（China Merchants Bank）是中国第一家完全由企业法人持股的股份制商业银行...',understand:'了解详情 GO >'},
+        wL01_r_01:[
+            {id:0,num:'01',num2:'创意设计',title:'服务客户名称：招商银行',section:'发布渠道：线上线下媒体',imgUrl:'../img/brand-logo-01.png'},
         ],
         /*页脚组件*/
         footCom:[
