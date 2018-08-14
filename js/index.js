@@ -42,6 +42,16 @@ var workLeftComponent = {
         </div>
     </div>`
 }
+//center
+var workCenterComponent = {
+    template:`
+    <div class="work-mark">
+        <p>GO</p>
+        <P>+</P>
+        <P>点击了解详情</P>
+    </div>
+`
+}
 //right
 var workRightComponent = {
     props: ['todo'],
@@ -56,16 +66,7 @@ var workRightComponent = {
         </div>
     </div>`
 }
-//center
-var workCenterComponent = {
-    template:`
-    <div class="work-mark">
-        <p>GO</p>
-        <P>+</P>
-        <P>点击了解详情</P>
-    </div>
-    `
-}
+
 /*vue 初始化*/
 var vm = new Vue({
     el: '#vueBox',
@@ -99,6 +100,7 @@ var vm = new Vue({
         wL01_r_01:[
             {id:0,num:'01',num2:'创意设计',title:'服务客户名称：招商银行',section:'发布渠道：线上线下媒体',imgUrl:'../img/brand-logo-01.png'},
         ],
+
         /*页脚组件*/
         footCom:[
             {id1:0,text1:'品牌展厅规划设计',id2:0,text2:'企业内部传播活动',id3:0,text3:'新闻发布会',id4:0,text4:'企业VI系统设计',id5:0,text5:'品牌视频解决方案',id6:0,text6:'微信公众号运营及维护'},
