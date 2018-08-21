@@ -17,10 +17,3 @@ $.ajax({
         $('.footer-detail').html(data)
     }
 })
-function app(){
-    let a =10,
-    var b = 20
-}
-app()
-console.log(a)
-console.log(b)

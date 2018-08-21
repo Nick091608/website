@@ -49,24 +49,8 @@ var workCenterComponent = {
         <p>GO</p>
         <P>+</P>
         <P>点击了解详情</P>
-    </div>
-`
-}
-//right
-var workRightComponent = {
-    props: ['todo'],
-    template:`
-    <div class="work-right">
-        <p class="w-r-num">{{todo.num}}</p>
-        <p class="w-r-num2">{{todo.num2}}</p>
-        <div class="work-under-r">
-            <img :src="todo.imgUrl" width="90%" alt="">
-            <p class="w-r-title">{{todo.title}}</p>
-            <p class="w-r-section">{{todo.section}}</p>
-        </div>
     </div>`
 }
-
 /*vue 初始化*/
 var vm = new Vue({
     el: '#vueBox',
@@ -79,7 +63,6 @@ var vm = new Vue({
         'foot-05':footComponent05,
         'foot-06':footComponent06,
         'work-left':workLeftComponent,
-        'work-right':workRightComponent,
         'work-center':workCenterComponent,
     },
     /*数据*/
@@ -94,11 +77,119 @@ var vm = new Vue({
         textC:{textAlign:'center',},
         textL:{textAlign:'left',},
         /*作品部分*/
+        /*第一屏*/
         wL01_l_01:[
             {id:0,newFast:'最新案例',title:'招行质押贷款海报',section:'招商银行（China Merchants Bank）是中国第一家完全由企业法人持股的股份制商业银行...',understand:'了解详情 GO >'},
         ],
-        wL01_r_01:[
-            {id:0,num:'01',num2:'创意设计',title:'服务客户名称：招商银行',section:'发布渠道：线上线下媒体',imgUrl:'../img/brand-logo-01.png'},
+        wL01_l_02:[
+            {id:0,newFast:'最新案例',title:'招行质押贷款海报',section:'招商银行（China Merchants Bank）是中国第一家完全由企业法人持股的股份制商业银行...',understand:'了解详情 GO >'},
+        ],
+        wL01_l_03:[
+            {id:0,newFast:'最新案例',title:'招行质押贷款海报',section:'招商银行（China Merchants Bank）是中国第一家完全由企业法人持股的股份制商业银行...',understand:'了解详情 GO >'},
+        ],
+        wL01_l_04:[
+            {id:0,newFast:'最新案例',title:'招行质押贷款海报',section:'招商银行（China Merchants Bank）是中国第一家完全由企业法人持股的股份制商业银行...',understand:'了解详情 GO >'},
+        ],
+        wL01_l_05:[
+            {id:0,newFast:'最新案例',title:'招行质押贷款海报',section:'招商银行（China Merchants Bank）是中国第一家完全由企业法人持股的股份制商业银行...',understand:'了解详情 GO >'},
+        ],
+        wL01_l_06:[
+            {id:0,newFast:'最新案例',title:'招行质押贷款海报',section:'招商银行（China Merchants Bank）是中国第一家完全由企业法人持股的股份制商业银行...',understand:'了解详情 GO >'},
+        ],
+        /*第二屏*/
+        wL02_l_01:[
+            {id:0,newFast:'最新案例',title:'乐视体育',section:'乐视体育营销推介会5分钟纪念视频...',understand:'了解详情 GO >'},
+        ],
+        wL02_l_02:[
+            {id:0,newFast:'最新案例',title:'康码唾液采集演示视频',section:'康码唾液采集演示视频...',understand:'了解详情 GO >'},
+        ],
+        wL02_l_03:[
+            {id:0,newFast:'最新案例',title:'哈曼用户大会花絮视频',section:'哈曼用户大会花絮视频...',understand:'了解详情 GO >'},
+        ],
+        wL02_l_04:[
+            {id:0,newFast:'最新案例',title:'北虹桥',section:'北虹桥时尚园开场视频...',understand:'了解详情 GO >'},
+        ],
+        wL02_l_05:[
+            {id:0,newFast:'最新案例',title:'公安大数据',section:'公安大数据平台操作界面演示...',understand:'了解详情 GO >'},
+        ],
+        wL02_l_06:[
+            {id:0,newFast:'最新案例',title:'FFI南通',section:'FFI南通新厂开业暨行业交流分享沙龙及晚宴开场视频及活动花絮...',understand:'了解详情 GO >'},
+        ],
+        /*第三屏*/
+        wL03_l_01:[
+            {id:0,newFast:'最新案例',title:'绿地集团',section:'绿地集团2015年年度盛典...',understand:'了解详情 GO >'},
+        ],
+        wL03_l_02:[
+            {id:0,newFast:'最新案例',title:'乐视体育',section:'乐视体育营销推介会...',understand:'了解详情 GO >'},
+        ],
+        wL03_l_03:[
+            {id:0,newFast:'最新案例',title:'东方网力',section:'东方网力第二届NFT大会...',understand:'了解详情 GO >'},
+        ],
+        wL03_l_04:[
+            {id:0,newFast:'最新案例',title:'招商银行',section:'“良宵·引”新春民族音乐鉴赏沙龙...',understand:'了解详情 GO >'},
+        ],
+        wL03_l_05:[
+            {id:0,newFast:'最新案例',title:'招商银行',section:'招商银行·私人银行2015年上半年投资策略报告会...',understand:'了解详情 GO >'},
+        ],
+        wL03_l_06:[
+            {id:0,newFast:'最新案例',title:'招商银行',section:'招商银行2014年年底答谢系列音乐会...',understand:'了解详情 GO >'},
+        ],
+        /*第四屏*/
+        wL04_l_01:[
+            {id:0,newFast:'最新案例',title:'东方网力',section:'东方网力2015深圳安防展...',understand:'了解详情 GO >'},
+        ],
+        wL04_l_02:[
+            {id:0,newFast:'最新案例',title:'东方网力',section:'东方网力企业体验厅...',understand:'了解详情 GO >'},
+        ],
+        wL04_l_03:[
+            {id:0,newFast:'最新案例',title:'亚什兰 PCHi 展',section:'招亚什兰 PCHi 展...',understand:'了解详情 GO >'},
+        ],
+        wL04_l_04:[
+            {id:0,newFast:'最新案例',title:'亚诗兰2015涂料展',section:'亚诗兰2015涂料展...',understand:'了解详情 GO >'},
+        ],
+        wL04_l_05:[
+            {id:0,newFast:'最新案例',title:'中广国际展台设计',section:'中广国际展台设计...',understand:'了解详情 GO >'},
+        ],
+        wL04_l_06:[
+            {id:0,newFast:'最新案例',title:'北虹桥',section:'北虹桥多媒体互动展示中心...',understand:'了解详情 GO >'},
+        ],
+        /*第五屏*/
+        wL05_l_01:[
+            {id:0,newFast:'最新案例',title:'EVCARD E家总动员',section:'EVCARD E家总动员 H5小游戏...',understand:'了解详情 GO >'},
+        ],
+        wL05_l_02:[
+            {id:0,newFast:'最新案例',title:'JBL 70周年',section:'JBL 70周年 官方微信推广...',understand:'了解详情 GO >'},
+        ],
+        wL05_l_03:[
+            {id:0,newFast:'最新案例',title:'哈曼汽车音响',section:'哈曼汽车音响微信公众号运营...',understand:'了解详情 GO >'},
+        ],
+        wL05_l_04:[
+            {id:0,newFast:'最新案例',title:'H5与小游戏创意类',section:'H5与小游戏创意类...',understand:'了解详情 GO >'},
+        ],
+        wL05_l_05:[
+            {id:0,newFast:'最新案例',title:'招行质押贷款海报',section:'招商银行（China Merchants Bank）是中国第一家完全由企业法人持股的股份制商业银行...',understand:'了解详情 GO >'},
+        ],
+        wL05_l_06:[
+            {id:0,newFast:'最新案例',title:'招行质押贷款海报',section:'招商银行（China Merchants Bank）是中国第一家完全由企业法人持股的股份制商业银行...',understand:'了解详情 GO >'},
+        ],
+        /*第六屏*/
+        wL06_l_01:[
+            {id:0,newFast:'最新案例',title:'招行质押贷款海报',section:'招商银行（China Merchants Bank）是中国第一家完全由企业法人持股的股份制商业银行...',understand:'了解详情 GO >'},
+        ],
+        wL06_l_02:[
+            {id:0,newFast:'最新案例',title:'招行质押贷款海报',section:'招商银行（China Merchants Bank）是中国第一家完全由企业法人持股的股份制商业银行...',understand:'了解详情 GO >'},
+        ],
+        wL06_l_03:[
+            {id:0,newFast:'最新案例',title:'招行质押贷款海报',section:'招商银行（China Merchants Bank）是中国第一家完全由企业法人持股的股份制商业银行...',understand:'了解详情 GO >'},
+        ],
+        wL06_l_04:[
+            {id:0,newFast:'最新案例',title:'招行质押贷款海报',section:'招商银行（China Merchants Bank）是中国第一家完全由企业法人持股的股份制商业银行...',understand:'了解详情 GO >'},
+        ],
+        wL06_l_05:[
+            {id:0,newFast:'最新案例',title:'招行质押贷款海报',section:'招商银行（China Merchants Bank）是中国第一家完全由企业法人持股的股份制商业银行...',understand:'了解详情 GO >'},
+        ],
+        wL06_l_06:[
+            {id:0,newFast:'最新案例',title:'招行质押贷款海报',section:'招商银行（China Merchants Bank）是中国第一家完全由企业法人持股的股份制商业银行...',understand:'了解详情 GO >'},
         ],
 
         /*页脚组件*/
