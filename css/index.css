@@ -328,7 +328,7 @@ a{text-decoration: none;}
 /*主体部分*/
 .work-page01-01-l,.work-page01-01-c,.work-page01-01-r{position:relative;height: 100%;color:#3e3a39;}
 .work-page01-01-l{width: 25%;}
-.work-page01-01-c,.work-page01-02-c,.work-page01-03-c,.work-page01-04-c,.work-page01-05-c,.work-page01-06-c,.work-page02-01-c,.work-page02-02-c,.work-page02-03-c,.work-page02-04-c,.work-page02-05-c,.work-page02-06-c{width: 40%;margin:0 5%;background:url("../img/brand-banner-01.jpg") no-repeat center /100% auto;}
+.work-page01-01-c,.work-page01-02-c,.work-page01-03-c,.work-page01-04-c,.work-page01-05-c,.work-page01-06-c,.work-page02-01-c,.work-page02-02-c,.work-page02-03-c,.work-page02-04-c,.work-page02-05-c,.work-page02-06-c,.work-page03-01-c,.work-page03-02-c,.work-page03-03-c,.work-page03-04-c,.work-page03-05-c,.work-page03-06-c,.work-page04-01-c,.work-page04-02-c,.work-page04-03-c,.work-page04-04-c,.work-page04-05-c,.work-page04-06-c,.work-page05-01-c,.work-page05-02-c,.work-page05-03-c,.work-page05-04-c,.work-page05-05-c,.work-page05-06-c,.work-page06-01-c,.work-page06-02-c,.work-page06-03-c,.work-page06-04-c,.work-page06-05-c,.work-page06-06-c{width: 40%;margin:0 5%;background:url("../img/brand-banner-01.jpg") no-repeat center /100% auto;}
 .work-page01-02-c{background:url("../img/brand-banner-02.gif") no-repeat center/100% auto;}
 .work-page01-03-c{background:url("../img/brand-banner-03.gif") no-repeat center/100% auto;}
 .work-page01-04-c{background:url("../img/brand-banner-04.jpg") no-repeat center/100% auto;}
@@ -341,12 +341,41 @@ a{text-decoration: none;}
 .work-under-l .w-section{font-size: 14px;width: 70%;}
 .work-under-l .w-under{margin: 5% 0 0 0;color:#bc0b21;font-size: 12px}
 .w-iconTotal{width: 100%;height: auto;}
-.work-page02-01-c{background:url("../img/brand-banner-04.jpg") no-repeat center/100% auto;}
-.work-page02-02-c{background:url("../img/brand-banner-05.jpg") no-repeat center/100% auto;}
-.work-page02-03-c{background:url("../img/brand-banner-06.jpg") no-repeat center/100% auto;}
-.work-page02-04-c{background:url("../img/brand-banner-04.jpg") no-repeat center/100% auto;}
-.work-page02-05-c{background:url("../img/brand-banner-05.jpg") no-repeat center/100% auto;}
-.work-page02-06-c{background:url("../img/brand-banner-06.jpg") no-repeat center/100% auto;}
+.work-page02-01-c{background:url("../img/marketing-logo01.jpg") no-repeat center/100% auto;}
+.work-page02-02-c{background:url("../img/marketing-logo02.jpg") no-repeat center/100% auto;}
+.work-page02-03-c{background:url("../img/marketing-logo03.jpg") no-repeat center/100% auto;}
+.work-page02-04-c{background:url("../img/marketing-logo04.jpg") no-repeat center/100% auto;}
+.work-page02-05-c{background:url("../img/marketing-logo05.jpg") no-repeat center/100% auto;}
+.work-page02-06-c{background:url("../img/marketing-logo06.jpg") no-repeat center/100% auto;}
+
+.work-page03-01-c{background:url("../img/marketing-logo01.jpg") no-repeat center/100% auto;}
+.work-page03-02-c{background:url("../img/marketing-logo02.jpg") no-repeat center/100% auto;}
+.work-page03-03-c{background:url("../img/marketing-logo03.jpg") no-repeat center/100% auto;}
+.work-page03-04-c{background:url("../img/marketing-logo04.jpg") no-repeat center/100% auto;}
+.work-page03-05-c{background:url("../img/marketing-logo05.jpg") no-repeat center/100% auto;}
+.work-page03-06-c{background:url("../img/marketing-logo06.jpg") no-repeat center/100% auto;}
+
+.work-page04-01-c{background:url("../img/space-logo01.jpg") no-repeat center/100% auto;}
+.work-page04-02-c{background:url("../img/space-logo02.jpg") no-repeat center/100% auto;}
+.work-page04-03-c{background:url("../img/space-logo03.jpg") no-repeat center/100% auto;}
+.work-page04-04-c{background:url("../img/space-logo04.png") no-repeat center/100% auto;}
+.work-page04-05-c{background:url("../img/space-logo05.jpg") no-repeat center/100% auto;}
+.work-page04-06-c{background:url("../img/space-logo06.jpg") no-repeat center/100% auto;}
+
+.work-page05-01-c{background:url("../img/doings-logo01.jpg") no-repeat center/100% auto;}
+.work-page05-02-c{background:url("../img/doings-logo02.png") no-repeat center/100% auto;}
+.work-page05-03-c{background:url("../img/doings-logo03.png") no-repeat center/100% auto;}
+.work-page05-04-c{background:url("../img/doings-logo04.png") no-repeat center/100% auto;}
+.work-page05-05-c{background:url("../img/doings-logo05.jpg") no-repeat center/100% auto;}
+.work-page05-06-c{background:url("../img/doings-logo06.jpg") no-repeat center/100% auto;}
+
+.work-page06-01-c{background:url("../img/space-logo01.jpg") no-repeat center/100% auto;}
+.work-page06-02-c{background:url("../img/space-logo02.jpg") no-repeat center/100% auto;}
+.work-page06-03-c{background:url("../img/space-logo03.jpg") no-repeat center/100% auto;}
+.work-page06-04-c{background:url("../img/space-logo04.png") no-repeat center/100% auto;}
+.work-page06-05-c{background:url("../img/space-logo05.jpg") no-repeat center/100% auto;}
+.work-page06-06-c{background:url("../img/space-logo06.jpg") no-repeat center/100% auto;}
+
 /*right*/
 .w-r-num{position: absolute;top:-20px;right:0;font-size: 60px;font-family: DIN;font-weight: bold;color:#b4b4b5;}
 .w-r-num2{position: absolute;top:50px;right:0;color:#888;}
